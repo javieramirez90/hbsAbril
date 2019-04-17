@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>First time with handlebars</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+  <h1>Mi nombre es {{name}}</h1>
+  <p>Y soy el {{profession}}</p>
+  <p>y tengo {{age}} años</p>
+  <img src="https://media.giphy.com/media/l0MYEqEzwMWFCg8rm/giphy.gif" alt="">
+  {{#if married}}
+  <h2>Happily!</h2>
+  {{else}}
+  <h2>Afortunadamente no</h2>
+  {{/if}}
+  <ul>
+    {{#each cities as | city |}}
+    <li>{{@index}} : {{city}}</li>
+    {{/each}}
+  </ul>
+  <h3>Mi dirección es:</h3>
+  {{#with address}}
+  <p>Calle: {{calle}}</p>
+  <p>Colonia: {{colonia}}</p>
+  {{/with}}
+
+  <h1>{{address.calle}}</h1>
+  <h2>{{address.colonia}}</h2>
+</body>
+</html>
